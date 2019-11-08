@@ -1,0 +1,240 @@
+.steps {
+    width: 100%;
+    max-width: 1635px;
+    background-color: white;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+        color: #333333;
+
+        margin-top: 120px;
+        margin-bottom: 40px;
+    }
+
+
+    &__heading {
+        width: 100%;
+        max-width: 1400px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #164466;
+        transition: .25s ease-out;
+
+        &-title {
+            max-width: 944px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            color: #f7f7f7;
+            transition: .25s ease-out;
+        }
+    }
+
+
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.67;
+        text-align: left;
+        color: #000000;
+
+        margin-top: 32px;
+        margin-bottom: 72px;
+    }
+
+
+    &__video {
+        width: 100%;
+        margin-bottom: 64px;
+
+        display: flex;
+        justify-content: center;
+        border-radius: 4px;
+        box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+    }
+
+
+    &__sub-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        color: #333333;
+
+        margin-bottom: 40px;
+    }
+}
+
+
+
+.steps-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    background-color: #164466;
+
+    padding: 72px 120px;
+    margin-bottom: 88px;
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.21;
+        text-align: left;
+        color: white;
+
+        margin-bottom: 16px;
+    }
+
+
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.78;
+        text-align: left;
+        color: white;
+
+        margin-bottom: 40px;
+    }
+
+
+    &__row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    button,
+    input {
+        width: calc(50% - 15px);
+    }
+
+
+    button {
+        margin-left: 30px;
+        height: 50px;
+        border-radius: 6px;
+        background-color: #ff9900;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.23;
+        letter-spacing: 1.04px;
+        text-align: center;
+        color: white;
+
+        text-transform: uppercase;
+        transition: .25s ease-out;
+
+        &:hover,
+        &:active {
+            background-color: #E8812A;
+        }
+    }
+
+
+    input {
+        padding: 10px 10px;
+
+        border-bottom: 1px solid white;
+        transition: .25s ease-out;
+
+        &,
+        &::placeholder {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.29;
+            letter-spacing: normal;
+            text-align: left;
+            color: #f2f2f2;
+        }
+
+        &:focus {
+            border-color: #FF9900;
+        }
+    }
+}
+
+
+.steps-test {
+    width: 100%;
+    max-width: 1400px;
+
+    padding: 110px 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    margin: 0 auto;
+
+
+    &__text {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: left;
+        color: #333333;
+
+        max-width: 992px;
+    }
+
+
+    &__btn {
+        width: 446px;
+        height: 64px;
+        border-radius: 4px;
+        border: solid 1px #164466;
+        background-color: #164466;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.29;
+        letter-spacing: 0.84px;
+        text-align: center;
+        color: white;
+
+        text-transform: uppercase;
+        transition: .25s ease-out;
+        &:hover,
+        &:active {
+            background-color: #165566;
+            color: white;
+        }
+    }
+}
