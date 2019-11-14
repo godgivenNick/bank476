@@ -1,109 +1,88 @@
 document.addEventListener('DOMContentLoaded', function(){
 
-    var client_width = document.documentElement.clientWidth; //     ширина окна
-    var cards_list_slider_slides = 3;
-    if(+client_width <= 1280){
-        cards_list_slider_slides = 2;
-    }
+    var quiz = document.getElementById('quiz_bank');
+    var quiz_steps = Array.from(quiz.querySelectorAll('.quiz-step'));
 
-    if(+client_width <= 640){
-        cards_list_slider_slides = 1;
-    }
+    var quiz_progress = quiz.querySelector('.quiz__progress');
+    var quiz_next_btn = quiz.querySelector('.quiz__btn');
+
+    var quiz_anwrs = [];
 
 
-    if(document.querySelector('.cards-list__slider')){
+    //  проверяет чекнут ли какой-либо вариант для текущего шага ( чтобы не пропустить нечекнутый варик )
+    function is_checked(){
 
-        //  основной слайдер для карточек
-        var cards_list_slider = new Swiper('.cards-list__slider', {
-    
-            init: true,
-            slidesPerView: cards_list_slider_slides,
-            speed: 600,
-            spaceBetween: 24,
-    
-            watchOverflow: true,
-            allowTouchMove: false,
-    
-            scrollbar: {
-                el: '.swiper-scrollbar',
-                draggable: true,
-                dragSize: '72px',
-                snapOnRelease: false,
-            },
-    
-            navigation: {
-                nextEl: '.cards-list__slider-next',
-                prevEl: '.cards-list__slider-prev',
-            },
-        
-        });
+        if(quiz.querySelector('.quiz-step._show input:checked')){
+            return true;
+        } else {
+            return false;
+        }
+
+    };
 
 
-        //  слайдер фоток в карточках
-        var cards_list_item_img_slider = new Swiper('.cards-list-item__slider', {
-    
-            init: true,
-            slidesPerView: 1,
-            speed: 500,
-            spaceBetween: 30,
-        
-            pagination: {
-                type: 'bullets',
-                el: '.swiper-pagination.cards-list-item__swiper-pagination',
-            },
-        
-        });
-    }
+    //  проверяет, не является ли текущий шаг последним
+    function is_last_step(step_id){
+
+        var quiz_last_step = quiz_steps[quiz_steps.length - 1].getAttribute('step');
+        if(step_id == quiz_last_step){
+            return true;
+        } else {
+            return false;
+        }
+
+    };
+
+
+    //  показать след шаг
+    function show_next_step(next_step_id){
+
+        //  выключить текущий
+        quiz.querySelector('.quiz-step._show').classList.remove('_show');
+
+
+        // включить следующий
+        quiz.querySelector('.quiz-step[step="' + next_step_id + '"]').classList.add('_show');
+
+
+        // Поменять текст в футере
+        quiz_progress.innerHTML = 'Вопрос ' + next_step_id + ' из ' + quiz_steps[quiz_steps.length - 1].getAttribute('step');
+    };
 
 
 
-    //  Результат поиска и Избранное в плиточной версии
-    if(document.querySelector('.table-card')){
 
 
-        //  слайдер фоток в карточках
-        var table_card_img_slider = new Swiper('.table-card__slider', {
-    
-            init: true,
-            slidesPerView: 1,
-            speed: 500,
-            spaceBetween: 30,
-        
-            pagination: {
-                type: 'bullets',
-                el: '.swiper-pagination.table-card__swiper-pagination',
-            },
-        
-        });
+    quiz_next_btn.addEventListener('click', function(){
 
-    }
+        if(is_checked()){
+
+            var current_step = quiz.querySelector('.quiz-step._show').getAttribute('step');
+            var next_step_id = +current_step + 1;
+            
+            //  формировка массива епта
+            var step_qtn = quiz.querySelector('.quiz-step._show .quiz__qstn').innerText;
+            var step_anw = quiz.querySelector('.quiz-step._show input:checked + span').innerText;
+            quiz_anwrs[current_step] = {
+                q: step_qtn,
+                a: step_anw,
+            };
 
 
+            if(!is_last_step(current_step)){
+                //  не последний шаг
 
-    //  Галерея для стр. Объект и Помещение
-    if(document.querySelector('.object-promo__galery')){
+                show_next_step(next_step_id);
+                console.log(quiz_anwrs);
+            } else {
+                //  последний шаг - показываем форму
 
+            }
+        } else {
 
-        var object_promo_galery_slider = new Swiper('.object-promo__galery', {
-    
-            init: true,
-            slidesPerView: 1,
-            speed: 500,
-            spaceBetween: 30,
-        
-            pagination: {
-                type: 'bullets',
-                el: '.swiper-pagination.object-promo__pagination',
-            },
+        }
 
-            navigation: {
-                nextEl: '.object-promo__next',
-                prevEl: '.object-promo__prev',
-            },
-        
-        });
-
-    }
+    });
 
 
 });

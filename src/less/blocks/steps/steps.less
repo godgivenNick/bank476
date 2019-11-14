@@ -79,7 +79,7 @@
         text-align: center;
         color: #333333;
 
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
     }
 }
 
@@ -104,6 +104,7 @@
         text-align: left;
         color: white;
 
+        max-width: 558px;
         margin-bottom: 16px;
     }
 
@@ -238,3 +239,579 @@
         }
     }
 }
+
+
+
+//  Карточки с линками
+
+.steps-cards__sub-title {
+    margin-top: 140px;
+    margin-bottom: 40px;
+
+    max-width: 1130px;
+}
+
+
+.steps-cards {
+    width: 100%;
+    max-width: 1400px;
+
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    margin-bottom: 120px;
+}
+
+
+
+.steps-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    border-radius: 4px;
+    border: solid 2px #164466;
+    background-color: white;
+
+    padding: 40px 35px 30px 35px;
+
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.43;
+        text-align: left;
+        color: #164466;
+
+        margin-bottom: 40px;
+    }
+
+    &__title-bold {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.33;
+        text-align: left;
+        color: #164466;
+
+        margin-bottom: 16px;
+    }
+
+
+    &__desc {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.71;
+        text-align: left;
+        color: #000000;
+
+        margin-bottom: 40px;
+
+        max-height: 192px;
+        overflow: hidden;
+    }
+
+
+    &__btn {
+        align-self: center;
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.29;
+        text-align: left;
+        color: #164466;
+
+        padding-right: 24px;
+        margin-top: auto;
+
+        position: relative;
+        &::after {
+            content: '';
+            width: 13px;
+            height: 15px;
+
+            background-image: url('../img/arrow_right_blue.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+            position: absolute;
+            right: 0;
+            top: 2px;
+
+            transition: .25s ease-out;
+
+        }
+    }
+
+    transition: .25s ease-out;
+    &:hover,
+    &:active {
+        text-decoration: none;
+
+        border-color: #ff9900;
+        .steps-card__btn {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+.steps-cards > .steps-card {
+    width: calc(100% / 3 - 20px);
+    margin-bottom: 30px;
+}
+
+.steps-cards > *:nth-child(3n+2) {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.steps-cards__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    width: calc(100% / 3 - 20px);
+}
+
+.steps-cards__col > .steps-card {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.steps-cards__offer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.78;
+    text-align: left;
+    color: #000000;
+
+    margin-bottom: 24px;
+}
+
+.steps-cards__test-btn {
+    width: 100%;
+    height: 64px;
+    border-radius: 4px;
+    background-color: #ff9900;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    letter-spacing: 0.84px;
+    text-align: center;
+    color: white;
+
+    text-transform: uppercase;
+
+    transition: .25s ease-out;
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+        color: white;
+        background-color: #E8812A;
+    }
+}
+
+
+
+.steps__choose-var {
+    margin-top: 40px;
+    margin-bottom: 24px;
+
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    text-align: center;
+    color: #949da6;
+}
+
+
+.steps-services {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    align-items: stretch;
+
+    margin-bottom: 80px;
+
+
+    &__card {
+        width: calc(100% / 3 - 16px);
+        margin-bottom: 24px;
+        &:nth-child(3n+2){
+            margin-right: 24px;
+            margin-left: 24px;
+        }
+
+        padding: 24px 16px;
+    }
+}
+
+
+.steps-card__title-bold + .steps-card__desc {
+    margin-top: auto;
+}
+
+.steps-card__title-bold + .steps-card__desc + .steps-card__btn {
+    margin-top: 0px;
+}
+
+
+// Порядок шагов с хуйней оранжевой
+.steps-order {
+    width: 100%;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    border: solid 1px #eeeeee;
+    background-color: white;
+
+    margin: 40px 0;
+}
+
+
+.steps-order__item {
+    width: 266px;
+
+    height: 120px;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 44px;
+
+
+    &-row {
+        display: flex; 
+        align-items: flex-start;
+    }
+
+
+    &-num {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.22;
+        text-align: right;
+        color: #164466;
+    }
+
+
+    &-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.33;
+        text-align: left;
+        color: #333333;   
+
+        margin: 0 16px;
+    }
+
+
+    position: relative;
+    &-arrow {
+        align-self: stretch;
+        width: 24px;
+        height: 100%;
+
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &::before,
+        &::after {
+            content: '';
+
+            width: 1px;
+            height: 70px;
+            background-color: #ff9900;
+
+            position: absolute;
+            right: 1px;
+            top: -10px;
+            transform-origin: bottom right;
+            transform: rotate(-15deg);
+        }
+
+        &::after {
+            transform: rotate(-165deg);
+            right: 2px;
+        }
+
+    }
+}
+
+
+
+@media only screen and (max-width: 1600px){
+
+    .steps-cards {
+        padding: 0 15px;
+    }
+
+
+    .steps-card__desc {
+        max-height: initial;
+    }
+
+
+    .steps-services {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 1366px){
+
+    .steps__title {
+        font-size: 40px;
+        
+    }
+
+    .steps__heading-title {
+        font-size: 28px;
+    }
+
+
+    .steps-cards__sub-title {
+        padding: 0 15px;
+        font-size: 28px;
+    }
+
+
+    .steps-form__title {
+        font-size: 22px;
+    }
+
+    .steps__sub-title {
+        font-size: 28px;
+    }
+
+
+    .steps-card__title {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .steps-test__text {
+        font-size: 28px;
+        margin-right: 16px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1024px){
+
+
+    .steps-cards {
+        justify-content: space-between;
+    }
+
+    .steps-card {
+        padding: 24px 15px 24px 15px;
+    }
+
+    .steps-cards > *:nth-child(3n+2) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .steps-cards > .steps-card {
+        width: calc(50% - 8px);
+        margin-bottom: 24px;
+    }
+
+
+    .steps-cards__col {
+        width: 100%;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .steps-cards__col > .steps-card {
+        width: calc(50% - 8px);
+    }
+
+    .steps-cards__offer,
+    .steps-cards__test-btn {
+        width: calc(50% - 8px);
+        margin-bottom: 48px;
+    }
+
+
+    .steps-card__desc {
+        margin-bottom: 24px;
+    }
+
+    
+    .n-container {
+        max-width: 100%;
+        
+        padding: 0 15px;
+    }
+    
+
+    .steps-form {
+        padding: 48px 24px;
+    }
+
+
+    .steps-test {
+        padding: 48px 24px;
+    }
+
+
+    .steps-services__card:nth-child(3n+2) {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .steps-services__card {
+        width: calc(100% / 3 - 10px);
+    }
+
+    .steps-card__title-bold {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+
+    .steps__video {
+
+        iframe {
+            height: 300px!important;
+        }
+    }
+
+
+    .steps-test {
+        flex-direction: column;
+    }
+
+
+    .steps-test__text {
+        margin-right: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+
+
+
+    .steps-order {
+        margin: 0;
+        flex-direction: column;
+        border: none;
+    }
+    
+    .steps-order__item-arrow {
+        display: none;
+    }
+    
+    .steps-order__item {
+        width: 100%;
+        height: auto;
+    
+        padding-left: 16px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid orange;
+    }
+
+    .steps-order__item-num {
+        margin-top: -5px;
+    }
+}
+
+
+@media only screen and (max-width: 640px){
+
+    .steps-form__row {
+        flex-wrap: wrap;
+    }
+
+    .steps-form button,
+    .steps-form input {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 16px;
+    }
+
+
+    .steps-test__btn {
+        width: 100%;
+    }
+
+
+
+
+    //
+
+    .steps-cards > .steps-card {
+        width: 100%;
+    }
+
+
+    .steps-cards__col {
+        flex-direction: column;
+    }
+
+    .steps-cards__col > .steps-card {
+        width: 100%;
+    }
+
+    .steps-cards__offer,
+    .steps-cards__test-btn {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .steps-cards__test-btn {
+
+        margin-bottom: 32px;
+    }
+
+    //
+
+
+    .steps-services {
+        flex-direction: column;
+    }
+
+    .steps-services__card {
+        width: 100%;
+
+    }
+
+    .steps-services__card:nth-child(3n+2) {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+

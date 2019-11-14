@@ -1,0 +1,116 @@
+.full.page-head-block
+    h1.h1 Пожалуйста, ответьте на вопросы, чтобы мы смогли сориентировать Вас по Вашему конкретному случаю.
+
+.page-content.n__page-content
+
+    <!-- Колбаса вадиковских изощрений -->
+    .page-order
+
+        .page-order__item
+            .page-order__item-row
+                .page-order__item-title(style='color: #164466') Разбор ситуаций должников
+
+        .page-order__item
+            .page-order__item-arrow
+            .page-order__item-row
+                .page-order__item-num 01
+                .page-order__item-title Сбор документов для подачи в суд
+
+        .page-order__item
+            .page-order__item-arrow
+            .page-order__item-row
+                .page-order__item-num 02
+                .page-order__item-title Подача заявления в суд
+
+        .page-order__item
+            .page-order__item-arrow
+            .page-order__item-row
+                .page-order__item-num 03
+                .page-order__item-title Первое заседание суда
+
+        .page-order__item._double
+            .page-order__item-arrow
+            .page-order__item-text Реструктуризация  долгов
+            .page-order__item-text Реализация имущества
+
+        .page-order__item
+            .page-order__item-arrow
+            .page-order__item-row
+                .page-order__item-num 04
+                .page-order__item-title Полное списание долгов по закону
+
+
+    <!-- QUIZ -->
+    section.quiz#quiz_bank
+
+        .quiz__footer
+            .quiz__progress Вопрос 1 из 5
+            button.quiz__btn Далее
+
+
+        a(href="javascript:void(0)").n-back-btn.quiz__n-back-btn ← Вернуться назад
+
+        .quiz-step(step='1')._show
+            h4.quiz__qstn Размер Вашей задолженности:
+            label.quiz-anwr
+                input(type="radio" name='s1')
+                span от 300 000 до 500 000 рублей
+            label.quiz-anwr
+                input(type="radio" name='s1')
+                span 500 000 – 5 000 000 рублей
+            label.quiz-anwr
+                input(type="radio" name='s1')
+                span Свыше 5 000 000 рублей
+
+            span.quiz__helper Дело о банкротстве рассматривается арбитражным судом по месту жительства.
+
+        .quiz-step(step='2')
+            h4.quiz__qstn У Вас долги перед:
+            label.quiz-anwr
+                input(type="radio" name='s2')
+                span Банками
+            label.quiz-anwr
+                input(type="radio" name='s2')
+                span Физическими лицами
+            label.quiz-anwr
+                input(type="radio" name='s2')
+                span Юридическими лицами
+            label.quiz-anwr
+                input(type="radio" name='s2')
+                span Микрокредитными организациями
+
+        .quiz-step(step='3')
+            h4.quiz__qstn Есть ли в собственности имущество:
+            label.quiz-anwr
+                input(type="radio" name='s3')
+                span Нет
+            label.quiz-anwr
+                input(type="radio" name='s3')
+                span от 1 до 5 ед.
+            label.quiz-anwr
+                input(type="radio" name='s3')
+                span Свыше 5 объектов
+    
+        .quiz-step(step='4')
+            h4.quiz__qstn Есть ли кредиты, взятые под залог:
+            label.quiz-anwr
+                input(type="radio" name='s4')
+                span Нет
+            label.quiz-anwr
+                input(type="radio" name='s4')
+                span Ипотека
+            label.quiz-anwr
+                input(type="radio" name='s4')
+                span Залоговое недвижимое имущество
+            label.quiz-anwr
+                input(type="radio" name='s4')
+                span Автокредит
+
+        .quiz-step(step='5')
+            h4.quiz__qstn Вы зарегистрированы:
+            label.quiz-anwr
+                input(type="radio" name='s5')
+                span Москва и Московская область
+            label.quiz-anwr
+                input(type="radio" name='s5')
+                span Другие регионы
